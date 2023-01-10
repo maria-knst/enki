@@ -14,7 +14,7 @@
       href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700&display=swap"
       rel="stylesheet"
     />
-    <title>Enki installation</title>
+    <title>Энки Спецмонтаж</title>
   </head>
   <body>
     <header class="header">
@@ -24,11 +24,12 @@
             <div class="location_icon-container">
               <img src="./images/loc.svg" alt="loc" />
             </div>
-            <p class="location_text">
+            <a href="https://www.google.com/maps/place/Ooo+Sogas/@52.7400564,27.4605815,17z/data=!3m1!4b1!4m5!3m4!1s0x46d83067d8ca6489:0x500b46dc2161bf5d!8m2!3d52.7400564!4d27.4627755"
+               target="_blank"
+               class="location_text">
               г.п. Старобин,<br />
-              ул. Краснознаменная 85,<br />
-              ком. 3
-            </p>
+              ул. Краснознаменная, д. 85/3
+            </a>
           </div>
 
           <div class="header_logo-group">
@@ -84,7 +85,7 @@
             >
               Позвонить
             </a>
-            <a href="#" class="top-section_button top-section_button-get">
+            <a href="#activities-section" class="top-section_button top-section_button-get">
               Посмотреть услуги
             </a>
           </div>
@@ -135,16 +136,16 @@
         <h2 class="title">Виды деятельности</h2>
         <div class="activities_container">
           <div class="activities_container-element">
-            <svg class="activitie_icon">
-              <use href="./images/activities/window.svg#window" />
-            </svg>
-            <h6 class="activitie_title">Установка окон</h6>
-            <p class="activitie_info">Дверей, витражей, и т.п.</p>
+            <div class="activitie_icon">
+              <img src="images/activities/diamond.svg" alt="A">
+            </div>
+            <h6 class="activitie_title">Алмазное сверление</h6>
+            <p class="activitie_info">Любой глубины и сложности</p>
           </div>
           <div class="activities_container-element">
-            <svg class="activitie_icon">
-              <use href="./images/activities/roller.svg#roller" />
-            </svg>
+            <div class="activitie_icon">
+              <img src="images/activities/roller.svg" alt="A">
+            </div>
             <h6 class="activitie_title">Отделочные работы</h6>
             <p class="activitie_info">
               Покраска, шпаклевка, поклейка обоев, установка подвесных потолков,
@@ -152,47 +153,47 @@
             </p>
           </div>
           <div class="activities_container-element">
-            <svg class="activitie_icon">
-              <use href="./images/activities/roof.svg#roof" />
-            </svg>
+            <div class="activitie_icon">
+              <img src="images/activities/roof.svg" alt="A">
+            </div>
             <h6 class="activitie_title">Кровельные работы</h6>
             <p class="activitie_info">Дверей, витражей, и т.п.</p>
           </div>
           <div class="activities_container-element">
-            <svg class="activitie_icon">
-              <use href="./images/activities/house.svg#house" />
-            </svg>
+            <div class="activitie_icon">
+              <img src="images/activities/house.svg" alt="A">
+            </div>
             <h6 class="activitie_title">Утепление фасадов</h6>
             <p class="activitie_info">Дверей, витражей, и т.п.</p>
           </div>
 
           <div class="activities_container-element hidden-element">
-            <svg class="activitie_icon">
-              <use href="./images/activities/drill.svg#drill" />
-            </svg>
-            <h6 class="activitie_title">Сверление отверстий</h6>
-            <p class="activitie_info">Любой глубины и сложности</p>
+            <div class="activitie_icon">
+              <img src="images/activities/window.svg" alt="A">
+            </div>
+            <h6 class="activitie_title">Установка окон</h6>
+            <p class="activitie_info">Дверей, витражей, и т.п.</p>
           </div>
           <div class="activities_container-element hidden-element">
-            <svg class="activitie_icon">
-              <use href="./images/activities/floor.svg#floor" />
-            </svg>
+            <div class="activitie_icon">
+              <img src="images/activities/floor.svg" alt="A">
+            </div>
             <h6 class="activitie_title">Укладка полов</h6>
             <p class="activitie_info">
               Плитка, деревянные полы, ламинат, линолеум и т.п.
             </p>
           </div>
           <div class="activities_container-element hidden-element">
-            <svg class="activitie_icon">
-              <use href="./images/activities/pipe.svg#pipe" />
-            </svg>
+            <div class="activitie_icon">
+              <img src="images/activities/wall.svg" alt="A">
+            </div>
             <h6 class="activitie_title">Бетонные работы</h6>
             <p class="activitie_info">Дверей, витражей, и т.п.</p>
           </div>
           <div class="activities_container-element hidden-element">
-            <svg class="activitie_icon">
-              <use href="./images/activities/pipe.svg#pipe" />
-            </svg>
+            <div class="activitie_icon">
+              <img src="images/activities/tubes.svg" alt="A">
+            </div>
             <h6 class="activitie_title">Благоустройство</h6>
             <p class="activitie_info">
               Водо-, тепло-, энергоснабжение, канализация, и т.п.
@@ -230,6 +231,9 @@
           <div class="about-certificate">
             <div class="about-certificate_icon">
               <img src="./images/certificate1.jpg" alt="certificate">
+              <div class="layer_block">
+                <button id="show-modal">+</button>
+              </div>
             </div>
             <div class="about-certificate_pagination">
               <div class="pag_item"></div>
@@ -238,6 +242,19 @@
               <div class="pag_item"></div>
             </div>
           </div>
+        </div>
+        <div id="about_icon-modal" class="about_icon-modal hidden-element">
+          <button id="close-modal" class="close-modal">
+            <img src="./images/cross.svg" alt="cross">
+          </button>
+          <button id="arrow-prev" class="modal-arrow1">
+            <img src="./images/arrow.svg" alt="arrow">
+          </button>
+          <div id="about-modal-container" class="about-certificate_icon_modal">
+          </div>
+          <button id="arrow-next" class="modal-arrow2">
+            <img src="./images/arrow.svg" alt="arrow">
+          </button>
         </div>
       </div>
     </section>
@@ -248,12 +265,13 @@
           <h3 class="footer-title">ООО «ЭнкиСпецМонтаж»</h3>
           <p class="footer-address">
             223730, Минская обл., Солигорский р-н,<br />
+            Офис: г. Солигорск, ул. Коммунальная, д. 27/5 <br />
             г.п. Старобин, ул. Краснознаменная, д.85, ком. 3
           </p>
           <h4 class="footer-title1">Расчетный счет:</h4>
           <div class="footer-text">
             BY AKKB 301 203 790 001 066 000 00<br />
-            ЦБУ №633 ОАО АСБ «Беларусьбанк», г. Солигорск, ул. Козлова, 23А<br />
+            ЦБУ №633 ОАО АСБ «Беларусбанк», г. Солигорск, ул. Козлова, 23А<br />
             код AKBBBY2X<br />
             УНП 692053714<br />
             <div class="footer_text-block">
@@ -266,7 +284,7 @@
               ><br />
             </div>
             <div class="footer_text-block">
-              <b>e-mail</b>: anki110918@gmail.com<br />
+              <b>e-mail</b>: <a href="email:anki110918@gmail.com">anki110918@gmail.com</a><br />
             </div>
             <div class="footer_text-block">
               <b>Директор</b>: Сержанин Сергей Михайлович<br />

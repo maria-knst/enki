@@ -123,7 +123,7 @@
 /*_______________________________________TOP-SECTION________________________________________*/
 
 .top_main-info {
-  background-image: url("../images/top-background_icon.jpg");
+  background-image: url("../images/top-background.jpg");
   background-repeat: no-repeat;
   background-position: right;
   background-size: 70%;
@@ -252,10 +252,10 @@
   color: #524f41;
   font-family: "Montserrat", sans-serif;
   font-weight: 500;
+  text-align: center;
   display: flex;
   flex-direction: column;
   align-items: center;
-  transition: all 0.5s ease-in-out;
 }
 
 .hidden-element {
@@ -264,6 +264,9 @@
 
 .activitie_icon {
   width: 20%;
+  height: 200px;
+  display: flex;
+  justify-content: center;
 }
 
 .activitie_title {
@@ -300,6 +303,9 @@
 
 /*_______________________________________ABOUT-SECTION________________________________________*/
 
+.about-section{
+  position: relative;
+}
 
 .about-container{
   display: flex;
@@ -327,6 +333,43 @@
   justify-content: center;
 }
 
+.about-certificate_icon{
+  position: relative;
+}
+
+.about-certificate_icon>img{
+  width: 100%;
+  height: 100%;
+}
+
+.layer_block{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top:0;
+  opacity: 0;
+  background: rgba(0,0,0,0.5);
+}
+
+.layer_block:hover{
+  opacity: 1;
+}
+
+.layer_block>button{
+  position: absolute;
+  top:50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  border: none;
+  background: white;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 32px;
+  font-weight: 500;
+}
+
 .pag_item{
   width: 5px;
   height: 5px;
@@ -337,6 +380,57 @@
 .pag_item-checked{
   background: #625F4E;
 }
+
+
+
+.about_icon-modal{
+  position: fixed;
+  top: 0;
+  left: 0;
+  padding-right: 1.2%;
+  z-index: 100;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(82, 79, 65, 0.69);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.close-modal{
+  position: absolute;
+  top: 0;
+  right: 1.2%;
+}
+
+.hidden-element{
+  display: none;
+}
+
+.about-certificate_icon_modal > img{
+    height: 100vh;
+}
+
+.modal-arrow1, .modal-arrow2, .close-modal{
+  width: 30px;
+  height: 30px;
+  border: none;
+  background: none;
+}
+
+.close-modal{
+  width: 20px;
+  height: 20px;
+}
+
+.modal-arrow1:hover, .modal-arrow2:hover {
+  opacity: 0.5;
+}
+
+.modal-arrow1{
+  transform: rotate(180deg);
+}
+
 
 /*_______________________________________~ABOUT-SECTION________________________________________*/
 
@@ -366,6 +460,7 @@
   font-weight: 500;
   font-size: 20px;
   margin-bottom: 20px;
+  line-height: 150%;
 }
 
 .footer-title1 {
@@ -385,6 +480,10 @@
 
 .footer_text-block {
   margin: 10px 0;
+}
+
+.footer_text-block > a {
+  color: white;
 }
 
 /*_______________________________________~FOOTER________________________________________*/
