@@ -24,6 +24,7 @@ let index = 1;
 
 arrowPrev.addEventListener('click', (event) => {
   event.preventDefault();
+  document.getElementById(`pag${index}`).classList.remove('about_pag_selected_item');
   if(index <= 1){
     index = 3;
   }
@@ -31,10 +32,12 @@ arrowPrev.addEventListener('click', (event) => {
     index--;
   }
   modalContainer.innerHTML = `<img src="./images/certificates/certificate${index}.jpg" alt="certificate">`;
+  document.getElementById(`pag${index}`).classList.add('about_pag_selected_item');
 });
 
 arrowNext.addEventListener('click', (event) => {
   event.preventDefault();
+  document.getElementById(`pag${index}`).classList.remove('about_pag_selected_item');
   if(index >= 3){
     index = 1;
   }
@@ -42,6 +45,7 @@ arrowNext.addEventListener('click', (event) => {
     index++;
   }
   modalContainer.innerHTML = `<img src="./images/certificates/certificate${index}.jpg" alt="certificate">`;
+  document.getElementById(`pag${index}`).classList.add('about_pag_selected_item');
 });
 
 closeModal.addEventListener('click', (event) => {

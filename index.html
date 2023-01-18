@@ -133,7 +133,7 @@
 
     <section class="activities-section" id="activities-section">
       <div class="container activities-section_container">
-        <h2 class="title">Виды деятельности</h2>
+        <h2 class="title">Наши услуги</h2>
         <div class="activities_container">
           <div class="activities_container-element">
             <div class="activitie_icon">
@@ -232,27 +232,37 @@
             <div class="about-certificate_icon">
               <img src="./images/certificate1.jpg" alt="certificate">
               <div class="layer_block">
-                <button id="show-modal">+</button>
+                <button id="show-modal" class="dark_button">
+                  <img src="./images/plus.svg" alt="plus">
+                </button>
+                <p>Смотреть</p>
               </div>
             </div>
             <div class="about-certificate_pagination">
-              <div class="pag_item"></div>
-              <div class="pag_item"></div>
+              <div class="pag_item pag_selected_item"></div>
               <div class="pag_item"></div>
               <div class="pag_item"></div>
             </div>
           </div>
         </div>
+
         <div id="about_icon-modal" class="about_icon-modal hidden-element">
-          <button id="close-modal" class="close-modal">
-            <img src="./images/cross.svg" alt="cross">
-          </button>
-          <button id="arrow-prev" class="modal-arrow1">
+          <button id="arrow-prev" class="modal-arrow1 light_button">
             <img src="./images/arrow.svg" alt="arrow">
           </button>
-          <div id="about-modal-container" class="about-certificate_icon_modal">
+          <div class="about_content_container">
+            <button id="close-modal" class="close-modal dark_button">
+              <img src="./images/plus.svg" alt="plus">
+            </button>
+            <div id="about-modal-container" class="about-certificate_icon_modal">
+            </div>
+            <div class="about-certificate_pagination">
+                <div id="pag1" class="pag_item about_pag_item about_pag_selected_item"></div>
+                <div id="pag2" class="pag_item about_pag_item"></div>
+                <div id="pag3" class="pag_item about_pag_item"></div>
+            </div>
           </div>
-          <button id="arrow-next" class="modal-arrow2">
+          <button id="arrow-next" class="modal-arrow2 light_button">
             <img src="./images/arrow.svg" alt="arrow">
           </button>
         </div>
