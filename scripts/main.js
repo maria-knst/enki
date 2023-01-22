@@ -19,32 +19,38 @@ const closeModal = document.getElementById('close-modal');
 const arrowPrev = document.getElementById('arrow-prev');
 const arrowNext = document.getElementById('arrow-next');
 
-modalContainer.innerHTML = '<img src="./images/certificates/certificate1.jpg" alt="certificate">';
+modalContainer.innerHTML = '<img src="./images/certificates/certificate1.png" alt="certificate">';
+
 let index = 1;
+const startCertificateIndex = 1;
+const lastCertificateIndex = 9;
+
+const getPagination = (element, number, light) => {
+  for(let i = 0; i < number; i++){
+    if(i === 0){
+      element.innerHTML += `<div id="${!light ? 'd':''}pag${i + 1}" class="pag_item ${light ? 'about_pag_item about_pag_selected_item' : 'pag_selected_item'}"></div>`;
+    }else {
+      element.innerHTML += `<div id="${!light ? 'd':''}pag${i + 1}" class="pag_item ${light && 'about_pag_item'}"></div>`;
+    }
+  }
+}
+
+getPagination(document.getElementById('modal-pagination'),lastCertificateIndex, true);
+getPagination(document.getElementById('about-pagination'),lastCertificateIndex);
 
 arrowPrev.addEventListener('click', (event) => {
   event.preventDefault();
   document.getElementById(`pag${index}`).classList.remove('about_pag_selected_item');
-  if(index <= 1){
-    index = 3;
-  }
-  else {
-    index--;
-  }
-  modalContainer.innerHTML = `<img src="./images/certificates/certificate${index}.jpg" alt="certificate">`;
+  index = (index <= startCertificateIndex) ? lastCertificateIndex : --index;
+  modalContainer.innerHTML = `<img src="./images/certificates/certificate${index}.png" alt="certificate">`;
   document.getElementById(`pag${index}`).classList.add('about_pag_selected_item');
 });
 
 arrowNext.addEventListener('click', (event) => {
   event.preventDefault();
   document.getElementById(`pag${index}`).classList.remove('about_pag_selected_item');
-  if(index >= 3){
-    index = 1;
-  }
-  else {
-    index++;
-  }
-  modalContainer.innerHTML = `<img src="./images/certificates/certificate${index}.jpg" alt="certificate">`;
+  index = (index >= lastCertificateIndex) ? startCertificateIndex : ++index;
+  modalContainer.innerHTML = `<img src="./images/certificates/certificate${index}.png" alt="certificate">`;
   document.getElementById(`pag${index}`).classList.add('about_pag_selected_item');
 });
 
