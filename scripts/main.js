@@ -1,5 +1,11 @@
 const activities = document.querySelectorAll(".activities_container-element");
+const activities_m = document.querySelectorAll(".activities_container-element-m");
+const list_items = document.querySelectorAll(".header-menu_list-item_clicked");
 const showMoreBut = document.getElementById("activities_show-more");
+
+if(window.innerWidth < 1200){
+  showMoreBut.innerHTML = '<img src="./images/arrow.svg">';
+}
 
 showMoreBut.addEventListener("click", (e) => {
   e.preventDefault();
@@ -7,9 +13,19 @@ showMoreBut.addEventListener("click", (e) => {
   activities.forEach((item) => {
     item.classList.remove("hidden-element");
   });
+  activities_m.forEach((item) => {
+    item.classList.remove("hidden-element");
+  });
+
   showMoreBut.classList.add("activities_show-more-hidden");
 });
 
+list_items.forEach(item => {
+  item.addEventListener('click', (ev) => {
+    document.getElementById('header-menu_modal').classList.add('hidden');
+    document.getElementById('header-menu').classList.remove('header-menu_active');
+  });
+})
 
 const modal = document.getElementById('about_icon-modal');
 const showButton = document.getElementById('show-modal');
@@ -63,4 +79,11 @@ closeModal.addEventListener('click', (event) => {
 showButton.addEventListener('click', (event) => {
   event.preventDefault();
   modal.classList.toggle('hidden-element');
+});
+
+
+document.getElementById('header-menu').addEventListener('click', (event) => {
+  event.preventDefault();
+  document.getElementById('header-menu_modal').classList.toggle('hidden');
+  document.getElementById('header-menu').classList.toggle('header-menu_active');
 });

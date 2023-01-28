@@ -8,6 +8,7 @@
     />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <link rel="stylesheet" href="./styles/style.css" />
+    <link rel="stylesheet" href="./styles/styles-middle.css">
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -19,6 +20,16 @@
   <body>
     <header class="header">
       <div class="header_first">
+        <div id="header-menu_modal" class="header-menu_modal hidden">
+          <ul class="header-menu_modal-list">
+            <a class="header-menu_list-item header-menu_list-item_clicked" href="#top-section">Главная</a>
+            <a class="header-menu_list-item header-menu_list-item_clicked" href="#about-section">О компании</a>
+            <a class="header-menu_list-item header-menu_list-item_clicked" href="#activities-section">Виды деятельности</a>
+            <a class="header-menu_list-item header-menu_list-item_clicked">Нам доверяют</a>
+            <a class="header-menu_list-item">Контакты</a>
+            <a class="header-menu_list-item">Адрес</a>
+          </ul>
+        </div>
         <div class="container header_first-container">
           <div class="header_location-group">
             <div class="location_icon-container">
@@ -30,6 +41,7 @@
               г.п. Старобин,<br />
               ул. Краснознаменная, д. 85/3
             </a>
+            <div id="header-menu" class="header-menu"></div>
           </div>
 
           <div class="header_logo-group">
@@ -44,9 +56,9 @@
           </div>
 
           <div class="header_phone-group">
-            <div class="phone">
+            <a href="tel:80174241733" class="phone">
               <img src="images/phone.svg" alt="phone" />
-            </div>
+            </a>
 
             <div class="phone_text">
               <a href="tel:80174241733">8 (017) 424-17-33</a>
@@ -66,9 +78,9 @@
       </div>
     </header>
 
-    <section class="top-section">
+    <section id="top-section" class="top-section">
+      <div class="gradient"></div>
       <div class="top_main-info">
-        <div class="gradient"></div>
         <div class="container top-section_container">
           <div class="top-section_title">
             <h1>
@@ -99,7 +111,7 @@
               <h4 class="info-element_title">Опыт</h4>
               <p class="info-element_text">
                 В нашей компании работают сотрудники со стажем в сфере
-                строительства 10+ лет
+                строительства 15+ лет
               </p>
             </div>
 
@@ -111,7 +123,7 @@
               </p>
             </div>
 
-            <div class="info-element">
+            <div class="info-element info-element-unmobile">
               <h4 class="info-element_title">Время</h4>
               <p class="info-element_text">
                 Мы всегда выполняем работы точно в срок, указанный в договоре.
@@ -119,7 +131,7 @@
               </p>
             </div>
 
-            <div class="info-element">
+            <div class="info-element info-element-unmobile">
               <h4 class="info-element_title">Развитие</h4>
               <p class="info-element_text">
                 Мы следим за новыми тенденциями в сфере строительства и
@@ -134,7 +146,7 @@
     <section class="activities-section" id="activities-section">
       <div class="container activities-section_container">
         <h2 class="title">Наши услуги</h2>
-        <div class="activities_container">
+        <div class="activities_container activities_container-desktop">
           <div class="activities_container-element">
             <div class="activitie_icon">
               <img src="images/activities/diamond.svg" alt="A">
@@ -200,6 +212,77 @@
             </p>
           </div>
         </div>
+
+        <div class="activities_container activities_container-mobile">
+          <div class="activities_inner-container-mobile">
+            <div class="activities_container-element-m">
+              <div class="activitie_icon">
+                <img src="images/activities/diamond.svg" alt="A">
+              </div>
+              <h6 class="activitie_title">Алмазное сверление</h6>
+              <p class="activitie_info">Любой глубины и сложности</p>
+            </div>
+            <div class="activities_container-element-m">
+              <div class="activitie_icon">
+                <img src="images/activities/roller.svg" alt="A">
+              </div>
+              <h6 class="activitie_title">Отделочные работы</h6>
+              <p class="activitie_info">
+                Покраска, шпаклевка, поклейка обоев, установка подвесных потолков,
+                и т. п.
+              </p>
+            </div>
+            <div class="activities_container-element-m">
+              <div class="activitie_icon">
+                <img src="images/activities/roof.svg" alt="A">
+              </div>
+              <h6 class="activitie_title">Кровельные работы</h6>
+              <p class="activitie_info">Дверей, витражей, и т.п.</p>
+            </div>
+            <div class="activities_container-element-m">
+              <div class="activitie_icon">
+                <img src="images/activities/house.svg" alt="A">
+              </div>
+              <h6 class="activitie_title">Утепление фасадов</h6>
+              <p class="activitie_info">Дверей, витражей, и т.п.</p>
+            </div>
+          </div>
+
+          <div class="activities_inner-container-mobile">
+            <div class="activities_container-element-m hidden-element">
+              <div class="activitie_icon">
+                <img src="images/activities/window.svg" alt="A">
+              </div>
+              <h6 class="activitie_title">Установка окон</h6>
+              <p class="activitie_info">Дверей, витражей, и т.п.</p>
+            </div>
+            <div class="activities_container-element-m hidden-element">
+              <div class="activitie_icon">
+                <img src="images/activities/floor.svg" alt="A">
+              </div>
+              <h6 class="activitie_title">Укладка полов</h6>
+              <p class="activitie_info">
+                Плитка, деревянные полы, ламинат, линолеум и т.п.
+              </p>
+            </div>
+            <div class="activities_container-element-m hidden-element">
+              <div class="activitie_icon">
+                <img src="images/activities/wall.svg" alt="A">
+              </div>
+              <h6 class="activitie_title">Бетонные работы</h6>
+              <p class="activitie_info">Дверей, витражей, и т.п.</p>
+            </div>
+            <div class="activities_container-element-m hidden-element">
+              <div class="activitie_icon">
+                <img src="images/activities/tubes.svg" alt="A">
+              </div>
+              <h6 class="activitie_title">Благоустройство</h6>
+              <p class="activitie_info">
+                Водо-, тепло-, энергоснабжение, канализация, и т.п.
+              </p>
+            </div>
+          </div>
+        </div>
         <div class="activities_button-container">
           <button class="activities_show-more" id="activities_show-more">
             Далее
@@ -213,6 +296,18 @@
         <h2 class="title">О компании</h2>
         <div class="about-container">
           <div class="about-info">
+            <div class="about-certificate">
+              <div class="about-certificate_icon">
+                <img src="./images/certificate1.jpg" alt="certificate">
+                <div class="layer_block">
+                  <button id="show-modal" class="enki-button dark_button">
+                    <img src="./images/plus.svg" alt="plus">
+                  </button>
+                  <p>Смотреть <br />сертификаты</p>
+                </div>
+              </div>
+              <div id="about-pagination" class="about-certificate_pagination"></div>
+            </div>
             <p>
               ООО «ЭнкиСпецМонтаж» — достаточно молодая организация. Она была
               создана в 2018 году и с этого момента активно развивается на рынке
@@ -222,24 +317,13 @@
               сметы проекта. Все работы выполняются в соответствии с действующей
               нормативной документацией.
             </p>
-            <p>
+            <p class="about-info-p">
               Мы сформировали команду «ЭнкиСпецМонтаж» исключительно из
               квалифицированных сотрудников, чей опыт работы в строительно
               отрасли насчитывает более 15 лет.
             </p>
           </div>
-          <div class="about-certificate">
-            <div class="about-certificate_icon">
-              <img src="./images/certificate1.jpg" alt="certificate">
-              <div class="layer_block">
-                <button id="show-modal" class="enki-button dark_button">
-                  <img src="./images/plus.svg" alt="plus">
-                </button>
-                <p>Смотреть <br />сертификаты</p>
-              </div>
-            </div>
-            <div id="about-pagination" class="about-certificate_pagination"></div>
-          </div>
+
         </div>
 
         <div id="about_icon-modal" class="about_icon-modal hidden-element">

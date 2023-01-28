@@ -28,6 +28,9 @@
   align-items: center;
   gap: 6%;
 }
+.header-menu, .header-menu_modal{
+  display: none;
+}
 .location_text {
   color: #ffffff;
   font-family: "Montserrat", sans-serif;
@@ -69,6 +72,11 @@
   justify-content: end;
   gap: 6%;
   width: 30%;
+}
+
+.phone>img {
+  width: 27px;
+  height: 27px;
 }
 
 .phone_text {
@@ -228,6 +236,7 @@
 
 /*_______________________________________ACTIVITIES-SECTION________________________________________*/
 
+
 .activities_container {
   display: flex;
   flex-wrap: wrap;
@@ -236,6 +245,10 @@
 
 .activities-section_container {
   margin: 60px auto 100px;
+}
+
+.activities_container-mobile{
+  display: none;
 }
 
 .title {
@@ -249,6 +262,18 @@
 
 .activities_container-element {
   width: 22%;
+  color: #524f41;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 500;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 10px 0 20px;
+}
+
+.activities_container-element-m {
+  width: 40%;
   color: #524f41;
   font-family: "Montserrat", sans-serif;
   font-weight: 500;
@@ -319,18 +344,23 @@
 }
 
 .about-info{
-  width: 55%;
   font-family: 'Montserrat', sans-serif;
   font-weight: 500;
   font-size: 20px;
   color: #524f41;
   line-height: 150%;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-evenly;
 }
 
+.about-info-p{
+  margin-top: 4%;
+}
 
+.about-certificate{
+  width: 35%;
+  margin-left: 12%;
+  margin-right: 4%;
+  float: right;
+}
 
 .about-certificate_pagination{
   display: flex;
