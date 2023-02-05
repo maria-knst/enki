@@ -20,7 +20,7 @@
         align-items: center;
         gap: 6%;
     }
-    .location_icon-container{
+    .location_icon-container_desktop{
         display: none;
     }
 
@@ -56,6 +56,7 @@
 
     .header-menu_active{
         background: #625F4E;
+        color: white;
     }
     .header-menu_active:before{
         background: #625F4E;
@@ -88,16 +89,19 @@
         font-size: 20px;
         text-decoration: none;
     }
-    .header-menu_list-item:active{
+    .header-menu_list-item_active, .header-menu_list-item:active{
         color: #ffffff;
         background: #625F4E;
     }
+
+
     .header-menu_modal-list:last-child{
         border-bottom: 1px solid rgba(98, 95, 78, 0.25);
     }
 
 
-    .location_text {
+
+    .location_text_desktop {
         display: none;
     }
     .logo_text-small{
@@ -107,13 +111,19 @@
         display: flex;
         gap: 8%;
     }
-    .phone_text {
+    .phone_text_desktop {
         display: none;
     }
     .phone>img{
         width: 40px;
         height: 40px;
     }
+
+    .header_location-group_menu{
+        width: 100%;
+        margin: 3% 0;
+    }
+
     /*____________________________________*/
     .header_second-container {
         display: flex;
@@ -123,6 +133,15 @@
 
     .header_second-container > a {
         display: none;
+    }
+
+    .header_phone-group_menu{
+        width: 100%;
+        justify-content: left;
+        margin: 3% 0;
+    }
+    .header_phone-group_menu .phone_text{
+        gap: 10px;
     }
     /*_______________________________________~HEADER________________________________________*/
 
@@ -172,6 +191,18 @@
     }
 
     /*_______________________________________~BENEFITS-SECTION________________________________________*/
+
+    /*.benefits-section_info-container:first-child {*/
+    /*    position: relative;*/
+    /*    animation-name: example;*/
+    /*    animation-duration: 10s;*/
+    /*}*/
+
+    /*@keyframes example {*/
+    /*    from   {left: 0;}*/
+    /*    to {left: -1000px;}*/
+    /*}*/
+
 
     /*_______________________________________ABOUT-SECTION________________________________________*/
 

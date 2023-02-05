@@ -72,7 +72,6 @@ arrowNext.addEventListener('click', (event) => {
 
 closeModal.addEventListener('click', (event) => {
   event.preventDefault();
-  console.log('CLOSE');
   modal.classList.toggle('hidden-element');
 });
 
@@ -81,9 +80,75 @@ showButton.addEventListener('click', (event) => {
   modal.classList.toggle('hidden-element');
 });
 
-
 document.getElementById('header-menu').addEventListener('click', (event) => {
   event.preventDefault();
   document.getElementById('header-menu_modal').classList.toggle('hidden');
   document.getElementById('header-menu').classList.toggle('header-menu_active');
 });
+
+
+document.getElementById('menu_item_contacts_p').addEventListener('click', (event) => {
+  event.preventDefault();
+  document.getElementById('menu_item_contacts').classList.toggle('header-menu_list-item_active');
+  document.getElementById('header_phone-group_menu_contacts').classList.toggle('hidden');
+
+});
+
+document.getElementById('menu_item_address_p').addEventListener('click', (event) => {
+  event.preventDefault();
+  document.getElementById('menu_item_address').classList.toggle('header-menu_list-item_active');
+  document.getElementById('header_location-group_menu').classList.toggle('hidden');
+
+});
+
+
+const sliders = [
+
+  '<div class="info-element">\n' +
+  '              <h4 class="info-element_title">Опыт</h4>\n' +
+  '              <p class="info-element_text">\n' +
+  '                В нашей компании работают сотрудники со стажем в сфере\n' +
+  '                строительства 15+ лет\n' +
+  '              </p>\n' +
+  '            </div>',
+
+  '<div class="info-element">\n' +
+  '              <h4 class="info-element_title">Качество</h4>\n' +
+  '              <p class="info-element_text">\n' +
+  '                Мы полностью уверены в качестве выполненной работы, поэтому\n' +
+  '                предоставляем длительную гарантию\n' +
+  '              </p>\n' +
+  '            </div>',
+
+  '<div class="info-element">\n' +
+  '              <h4 class="info-element_title">Время</h4>\n' +
+  '              <p class="info-element_text">\n' +
+  '                Мы всегда выполняем работы точно в срок, указанный в договоре.\n' +
+  '                Мы ценим Ваше время\n' +
+  '              </p>\n' +
+  '            </div>',
+
+  '<div class="info-element">\n' +
+  '              <h4 class="info-element_title">Развитие</h4>\n' +
+  '              <p class="info-element_text">\n' +
+  '                Мы следим за новыми тенденциями в сфере строительства и\n' +
+  '                своевременно включаем их в свою работу\n' +
+  '              </p>\n' +
+  '            </div>',
+];
+
+let slideIndex = 0;
+const benefitsSlider = document.getElementById('benefits-section_info-container');
+
+if(window.innerWidth <= 1200) {
+  setInterval(() => {
+    if(slideIndex === sliders.length - 1){
+      benefitsSlider.innerHTML = sliders[slideIndex] + sliders[0];
+      slideIndex = 0;
+    }else {
+      benefitsSlider.innerHTML = sliders[slideIndex] + sliders[slideIndex + 1];
+      slideIndex++;
+    }
+  }, 3000);
+}
+

@@ -26,18 +26,43 @@
             <a class="header-menu_list-item header-menu_list-item_clicked" href="#about-section">О компании</a>
             <a class="header-menu_list-item header-menu_list-item_clicked" href="#activities-section">Виды деятельности</a>
             <a class="header-menu_list-item header-menu_list-item_clicked">Нам доверяют</a>
-            <a class="header-menu_list-item">Контакты</a>
-            <a class="header-menu_list-item">Адрес</a>
+            <li id="menu_item_address" class="header-menu_list-item">
+              <p id="menu_item_address_p">Адрес</p>
+              <div id="header_location-group_menu" class="header_location-group header_location-group_menu hidden">
+                <div class="location_icon-container">
+                  <img src="./images/Location.svg" alt="loc" />
+                </div>
+                <a href="https://www.google.com/maps/place/Ooo+Sogas/@52.7400564,27.4605815,17z/data=!3m1!4b1!4m5!3m4!1s0x46d83067d8ca6489:0x500b46dc2161bf5d!8m2!3d52.7400564!4d27.4627755"
+                   target="_blank"
+                   class="location_text">
+                  г.п. Старобин,<br />
+                  ул. Краснознаменная, д. 85/3
+                </a>
+              </div>
+            </li>
+            <li id="menu_item_contacts" class="header-menu_list-item">
+              <p id="menu_item_contacts_p" class="menu_item_title">Контакты</p>
+              <div id="header_phone-group_menu_contacts" class="header_phone-group header_phone-group_menu hidden">
+                <a href="tel:80174241733" class="phone">
+                  <img src="images/phone.svg" alt="phone" />
+                </a>
+
+                <div class="phone_text">
+                  <a href="tel:80174241733">8 (017) 424-17-33</a>
+                  <a href="tel:80296226090">8 (029) 622-50-90</a>
+                </div>
+              </div>
+            </li>
           </ul>
         </div>
         <div class="container header_first-container">
           <div class="header_location-group">
-            <div class="location_icon-container">
+            <div class="location_icon-container location_icon-container_desktop">
               <img src="./images/Location.svg" alt="loc" />
             </div>
             <a href="https://www.google.com/maps/place/Ooo+Sogas/@52.7400564,27.4605815,17z/data=!3m1!4b1!4m5!3m4!1s0x46d83067d8ca6489:0x500b46dc2161bf5d!8m2!3d52.7400564!4d27.4627755"
                target="_blank"
-               class="location_text">
+               class="location_text location_text_desktop">
               г.п. Старобин,<br />
               ул. Краснознаменная, д. 85/3
             </a>
@@ -60,7 +85,7 @@
               <img src="images/phone.svg" alt="phone" />
             </a>
 
-            <div class="phone_text">
+            <div class="phone_text phone_text_desktop">
               <a href="tel:80174241733">8 (017) 424-17-33</a>
               <a href="tel:80296226090">8 (029) 622-50-90</a>
             </div>
@@ -106,7 +131,7 @@
 
       <div class="benefits-section">
         <div class="container benefits-section-container">
-          <div class="benefits-section_info-container">
+          <div class="benefits-section_info-container" id="benefits-section_info-container">
             <div class="info-element">
               <h4 class="info-element_title">Опыт</h4>
               <p class="info-element_text">
@@ -381,6 +406,6 @@
       </div>
     </footer>
 
-    <script src="./scripts/main.js"></script>
+    <script type="module" src="./scripts/main.js"></script>
   </body>
 </html>
