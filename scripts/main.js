@@ -86,6 +86,27 @@ document.getElementById('header-menu').addEventListener('click', (event) => {
   document.getElementById('header-menu').classList.toggle('header-menu_active');
 });
 
+const getTrustPage = (event) => {
+  event.preventDefault();
+  console.log("TRUST");
+  document.getElementById('main-content').classList.add('hidden-element');
+  document.getElementById('trust-content').classList.remove('hidden-element');
+};
+
+const getMainPage = (event) => {
+  event.preventDefault();
+  console.log("LOG");
+  document.getElementById('trust-content').classList.add('hidden-element');
+  document.getElementById('main-content').classList.remove('hidden-element');
+};
+
+
+document.querySelectorAll('.get-trust_page').forEach(item => {
+  item.addEventListener('click', getTrustPage);
+});
+document.querySelectorAll('.get-main_page').forEach(item => {
+  item.addEventListener('click', getMainPage);
+});
 
 document.getElementById('menu_item_contacts_p').addEventListener('click', (event) => {
   event.preventDefault();
