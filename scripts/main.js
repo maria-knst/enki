@@ -88,25 +88,73 @@ document.getElementById('header-menu').addEventListener('click', (event) => {
 
 const getTrustPage = (event) => {
   event.preventDefault();
-  console.log("TRUST");
   document.getElementById('main-content').classList.add('hidden-element');
   document.getElementById('trust-content').classList.remove('hidden-element');
 };
+// const getMainPage = (event) => {
+//   event.preventDefault();
+//   document.getElementById('trust-content').classList.add('hidden-element');
+//   document.getElementById('main-content').classList.remove('hidden-element');
+// };
+// const getAboutCompanyAnchor = (event) => {
+//   event.preventDefault();
+//   document.getElementById('trust-content').classList.add('hidden-element');
+//   document.getElementById('main-content').classList.remove('hidden-element');
+//   document.getElementById('about-section').scrollIntoView();
+// };
+// const getActionsAnchor = (event) => {
+//   event.preventDefault();
+//   document.getElementById('trust-content').classList.add('hidden-element');
+//   document.getElementById('main-content').classList.remove('hidden-element');
+//   document.getElementById('activities-section').scrollIntoView();
+// };
+// const getFooterAnchor = (event) => {
+//   event.preventDefault();
+//   document.getElementById('trust-content').classList.add('hidden-element');
+//   document.getElementById('main-content').classList.remove('hidden-element');
+//   document.getElementById('contacts').scrollIntoView();
+// };
 
-const getMainPage = (event) => {
+
+const getAnchor = (event, anchor) => {
   event.preventDefault();
-  console.log("LOG");
   document.getElementById('trust-content').classList.add('hidden-element');
   document.getElementById('main-content').classList.remove('hidden-element');
-};
+  switch (anchor){
+    case 'about-company':
+      document.getElementById('about-section').scrollIntoView();
+      break;
+    case 'actions':
+      document.getElementById('activities-section').scrollIntoView();
+      break;
+    case 'contacts':
+      document.getElementById('contacts').scrollIntoView();
+      break;
+    default:
+      document.getElementById('header').scrollIntoView();
+      break;
+  }
+}
 
 
 document.querySelectorAll('.get-trust_page').forEach(item => {
   item.addEventListener('click', getTrustPage);
 });
 document.querySelectorAll('.get-main_page').forEach(item => {
-  item.addEventListener('click', getMainPage);
+  item.addEventListener('click', (event) => getAnchor(event));
 });
+
+document.querySelectorAll('.get-about-company_page').forEach(item => {
+  item.addEventListener('click', (event) =>  getAnchor(event,'about-company'));
+});
+document.querySelectorAll('.get-actions_page').forEach(item => {
+  item.addEventListener('click', (event) => getAnchor(event, 'actions'));
+});
+document.querySelectorAll('.get-footer_page').forEach(item => {
+  item.addEventListener('click', (event) => getAnchor(event, 'contacts'));
+});
+
+
 
 document.getElementById('menu_item_contacts_p').addEventListener('click', (event) => {
   event.preventDefault();
