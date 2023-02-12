@@ -44,6 +44,9 @@
   display: flex;
   gap: 8%;
 }
+.header_logo-group:hover{
+  cursor: pointer;
+}
 
 /*__________________________________*/
 
@@ -63,7 +66,7 @@
 .logo_text-small {
   font-family: "Montserrat", sans-serif;
   font-weight: 700;
-  font-size: 16px;
+  font-size: 20px;
 }
 
 /*__________________________________*/
