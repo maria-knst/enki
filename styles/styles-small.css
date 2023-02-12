@@ -1,3 +1,144 @@
 @media (max-width: 720px) {
-    
+
+    .container{
+        min-width: 320px;
+    }
+
+    .header-menu{
+        width: 28%;
+    }
+    .logo_text-large{
+        font-size: 36px;
+    }
+    .logo_text-small{
+        font-size: 15px;
+    }
+
+    .header_logo-group{
+        align-items: flex-end;
+    }
+
+    .logo_icon-container>img{
+        height: 54px;
+    }
+
+    .top_main-info{
+        min-height: auto;
+        position: relative;
+    }
+
+    .top-section_title{
+        width: 100%;
+    }
+    .top-section_title>h1{
+        font-size: 32px;
+    }
+
+    .top-section_buttons{
+        flex-direction: column;
+    }
+    .top-section_button{
+        font-size: 16px;
+        height: 40px;
+    }
+
+    .top-section_button-call{
+        width: 140px;
+    }
+    .top-section_button-get{
+        width: 220px;
+    }
+
+    .gradient{
+        min-height: auto;
+        height: 100%;
+        background: linear-gradient(#625f4e 10%, rgba(255, 255, 255, 0), #ffffff);
+    }
+
+    .title{
+        font-size: 22px;
+    }
+
+    .benefits-section{
+        margin-top: 60px;
+    }
+
+    .benefits-section-container-title{
+        display: block;
+    }
+
+    .benefits-section_info-container{
+        position: relative;
+        top: 0;
+        flex-wrap: wrap;
+    }
+    .info-element-unmobile{
+        display: block;
+    }
+
+    .info-element{
+        color: #625F4E;
+        background: transparent;
+        border: none;
+        box-shadow: none;
+    }
+
+    .info-element_title{
+        font-size: 18px;
+    }
+
+
+    .activitie_title{
+        font-size: 16px;
+    }
+
+    .activitie_info{
+        font-size: 12px;
+    }
+
+    .activities_show-more{
+        width: 40px;
+        height: 40px;
+    }
+
+    .activities_show-more>img{
+        width: 20px;
+        transform: translate(2%, 15%) rotate(90deg);
+    }
+
+    .about-certificate{
+        width: 90%;
+        margin: 30px auto;
+        float: none;
+    }
+
+    .about-info{
+        display: flex;
+        flex-direction: column-reverse;
+    }
+
+
+    .footer-title, .footer-title1{
+        font-size: 20px;
+    }
+
+    .footer-address, .footer-text{
+        font-size: 16px;
+    }
+
+
+    .trust-list{
+        font-size: 16px;
+        font-weight: 700;
+    }
+}
+
+@media (max-width: 510px) {
+        .gradient{
+            background: linear-gradient(#625f4e 30%, rgba(255, 255, 255, 0), #ffffff);
+        }
+
+    .top_main-info{
+        background-position: bottom;
+    }
 }

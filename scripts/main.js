@@ -4,7 +4,7 @@ const list_items = document.querySelectorAll(".header-menu_list-item_clicked");
 const showMoreBut = document.getElementById("activities_show-more");
 
 if(window.innerWidth < 1200){
-  showMoreBut.innerHTML = '<img src="./images/arrow.svg">';
+  showMoreBut.innerHTML = '<img src="./images/arrow.svg" alt="arrow">';
 }
 
 showMoreBut.addEventListener("click", (e) => {
@@ -22,6 +22,7 @@ showMoreBut.addEventListener("click", (e) => {
 
 list_items.forEach(item => {
   item.addEventListener('click', (ev) => {
+    ev.preventDefault();
     document.getElementById('header-menu_modal').classList.add('hidden');
     document.getElementById('header-menu').classList.remove('header-menu_active');
   });
@@ -91,31 +92,6 @@ const getTrustPage = (event) => {
   document.getElementById('main-content').classList.add('hidden-element');
   document.getElementById('trust-content').classList.remove('hidden-element');
 };
-// const getMainPage = (event) => {
-//   event.preventDefault();
-//   document.getElementById('trust-content').classList.add('hidden-element');
-//   document.getElementById('main-content').classList.remove('hidden-element');
-// };
-// const getAboutCompanyAnchor = (event) => {
-//   event.preventDefault();
-//   document.getElementById('trust-content').classList.add('hidden-element');
-//   document.getElementById('main-content').classList.remove('hidden-element');
-//   document.getElementById('about-section').scrollIntoView();
-// };
-// const getActionsAnchor = (event) => {
-//   event.preventDefault();
-//   document.getElementById('trust-content').classList.add('hidden-element');
-//   document.getElementById('main-content').classList.remove('hidden-element');
-//   document.getElementById('activities-section').scrollIntoView();
-// };
-// const getFooterAnchor = (event) => {
-//   event.preventDefault();
-//   document.getElementById('trust-content').classList.add('hidden-element');
-//   document.getElementById('main-content').classList.remove('hidden-element');
-//   document.getElementById('contacts').scrollIntoView();
-// };
-
-
 const getAnchor = (event, anchor) => {
   event.preventDefault();
   document.getElementById('trust-content').classList.add('hidden-element');
@@ -209,7 +185,7 @@ const sliders = [
 let slideIndex = 0;
 const benefitsSlider = document.getElementById('benefits-section_info-container');
 
-if(window.innerWidth <= 1200) {
+if(window.innerWidth <= 1200 && window.innerWidth >= 720) {
   setInterval(() => {
     if(slideIndex === sliders.length - 1){
       benefitsSlider.innerHTML = sliders[slideIndex] + sliders[0];

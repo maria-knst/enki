@@ -193,6 +193,10 @@
   min-height: 180px;
 }
 
+.benefits-section-container-title{
+  display: none;
+}
+
 .benefits-section_info-container {
   display: flex;
   gap: 20px;
