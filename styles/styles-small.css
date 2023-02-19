@@ -28,7 +28,6 @@
     }
 
     .top_main-info{
-        min-height: auto;
         position: relative;
     }
 
@@ -56,8 +55,8 @@
 
     .gradient{
         min-height: auto;
-        height: 100%;
-        background: linear-gradient(#625f4e 10%, rgba(255, 255, 255, 0), #ffffff);
+        height: 101%;
+        background: linear-gradient(#625f4e 32%, rgba(255, 255, 255, 0), #ffffff 90%);
     }
 
     .title{
@@ -165,13 +164,24 @@
     }
 }
 
+@media (max-width: 640px) {
+    .gradient{
+        background: linear-gradient(#625f4e 45%, rgba(255, 255, 255, 0), #ffffff);
+    }
+}
+
 @media (max-width: 510px) {
+    .top-section_title>h1{
+        font-size: 28px;
+    }
+
     .gradient{
         background: linear-gradient(#625f4e 48%, rgba(255, 255, 255, 0), #ffffff);
     }
 
     .top_main-info{
         background-position: bottom;
+        min-height: auto;
     }
 
     .close-modal{

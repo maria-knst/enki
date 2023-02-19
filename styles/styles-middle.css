@@ -14,8 +14,6 @@
         position: relative;
     }
 
-
-
     .header_location-group {
         display: flex;
         width: 30%;
@@ -152,6 +150,9 @@
     .top_main-info {
         background-size: 100%;
         position: relative;
+        background-position: bottom;
+        min-height: 650px;
+        background-image: url("../images/top-background-mobile.jpg");
     }
 
     .gradient {
@@ -243,6 +244,10 @@
 @media (max-width: 900px) {
     .about-info>p{
         font-size: 18px;
+    }
+
+    .top_main-info {
+        min-height: 600px;
     }
 
 }
