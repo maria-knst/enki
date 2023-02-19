@@ -16,6 +16,7 @@
       href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700&display=swap"
       rel="stylesheet"
     />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
     <title>Энки Спецмонтаж</title>
   </head>
   <body>
@@ -136,37 +137,41 @@
         <div class="benefits-section">
           <div class="container benefits-section-container">
             <h2 class="benefits-section-container-title title">Почему мы?</h2>
-            <div class="benefits-section_info-container" id="benefits-section_info-container">
-              <div class="info-element">
-                <h4 class="info-element_title">Опыт</h4>
-                <p class="info-element_text">
-                  В нашей компании работают сотрудники со стажем в сфере
-                  строительства 15+ лет
-                </p>
-              </div>
+            <div class="benefits-section_container">
+              <div id="benefits-section_info-container">
+                <div id="swiper-wrapper" class="benefits-section_info-container">
+                  <div class="info-element">
+                    <h4 class="info-element_title">Опыт</h4>
+                    <p class="info-element_text">
+                      В нашей компании работают сотрудники со стажем в сфере
+                      строительства 15+ лет
+                    </p>
+                  </div>
 
-              <div class="info-element">
-                <h4 class="info-element_title">Качество</h4>
-                <p class="info-element_text">
-                  Мы полностью уверены в качестве выполненной работы, поэтому
-                  предоставляем длительную гарантию
-                </p>
-              </div>
+                  <div class="info-element">
+                    <h4 class="info-element_title">Качество</h4>
+                    <p class="info-element_text">
+                      Мы полностью уверены в качестве выполненной работы, поэтому
+                      предоставляем длительную гарантию
+                    </p>
+                  </div>
 
-              <div class="info-element info-element-unmobile">
-                <h4 class="info-element_title">Время</h4>
-                <p class="info-element_text">
-                  Мы всегда выполняем работы точно в срок, указанный в договоре.
-                  Мы ценим Ваше время
-                </p>
-              </div>
+                  <div class="info-element">
+                    <h4 class="info-element_title">Время</h4>
+                    <p class="info-element_text">
+                      Мы всегда выполняем работы точно в срок, указанный в договоре.
+                      Мы ценим Ваше время
+                    </p>
+                  </div>
 
-              <div class="info-element info-element-unmobile">
-                <h4 class="info-element_title">Развитие</h4>
-                <p class="info-element_text">
-                  Мы следим за новыми тенденциями в сфере строительства и
-                  своевременно включаем их в свою работу
-                </p>
+                  <div class="info-element">
+                    <h4 class="info-element_title">Развитие</h4>
+                    <p class="info-element_text">
+                      Мы следим за новыми тенденциями в сфере строительства и
+                      своевременно включаем их в свою работу
+                    </p>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
@@ -328,7 +333,7 @@
             <div class="about-info">
               <div class="about-certificate">
                 <div class="about-certificate_icon">
-                  <img src="./images/certificates/certificate1.png" alt="certificate">
+                  <img src="./images/certificate-logo.png" alt="certificate">
                   <div class="layer_block">
                     <button id="show-modal" class="enki-button dark_button">
                       <img src="./images/plus.svg" alt="plus">
@@ -359,21 +364,74 @@
           </div>
 
           <div id="about_icon-modal" class="about_icon-modal hidden-element">
-            <button id="arrow-prev" class="modal-arrow1 enki-button light_button">
-              <img src="./images/arrow.svg" alt="arrow">
-            </button>
             <div class="about_content_container">
               <button id="close-modal" class="close-modal enki-button dark_button">
                 <img src="./images/plus.svg" alt="plus">
               </button>
+              <div id="about-modal-container" class="swiper modal-swiper about-certificate_icon_modal">
 
-              <div id="about-modal-container" class="about-certificate_icon_modal"></div>
+                <div class="swiper-wrapper">
+                  <div class="swiper-slide swiper-slide_modal">
+                    <div class="swiper-slide_image">
+                      <img src="./images/certificates/certificate1.png" alt="1">
+                    </div>
+                  </div>
 
-              <div id="modal-pagination" class="about-certificate_pagination"></div>
+                  <div class="swiper-slide swiper-slide_modal">
+                    <div class="swiper-slide_image">
+                      <img src="./images/certificates/certificate2.png" alt="2">
+                    </div>
+                  </div>
+
+                  <div class="swiper-slide swiper-slide_modal">
+                    <div class="swiper-slide_image">
+                      <img src="./images/certificates/certificate3.png" alt="3">
+                    </div>
+                  </div>
+
+                  <div class="swiper-slide swiper-slide_modal">
+                    <div class="swiper-slide_image">
+                      <img src="./images/certificates/certificate4.png" alt="4">
+                    </div>
+                  </div>
+
+                  <div class="swiper-slide swiper-slide_modal">
+                    <div class="swiper-slide_image">
+                      <img src="./images/certificates/certificate5.png" alt="5">
+                    </div>
+                  </div>
+
+                  <div class="swiper-slide swiper-slide_modal">
+                    <div class="swiper-slide_image">
+                      <img src="./images/certificates/certificate6.png" alt="6">
+                    </div>
+                  </div>
+
+                  <div class="swiper-slide swiper-slide_modal">
+                    <div class="swiper-slide_image">
+                      <img src="./images/certificates/certificate7.png" alt="7">
+                    </div>
+                  </div>
+
+                  <div class="swiper-slide swiper-slide_modal">
+                    <div class="swiper-slide_image">
+                      <img src="./images/certificates/certificate8.png" alt="8">
+                    </div>
+                  </div>
+
+                  <div class="swiper-slide swiper-slide_modal">
+                    <div class="swiper-slide_image">
+                      <img src="./images/certificates/certificate9.png" alt="9">
+                    </div>
+                  </div>
+                </div>
+
+                <div class="swiper-pagination"></div>
+
+                <div class="swiper-button-prev enki-button light_button"></div>
+                <div class="swiper-button-next enki-button light_button"></div>
+              </div>
             </div>
-            <button id="arrow-next" class="modal-arrow2 enki-button light_button">
-              <img src="./images/arrow.svg" alt="arrow">
-            </button>
           </div>
         </div>
       </section>
@@ -443,6 +501,7 @@
         </div>
       </footer>
 
+    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
     <script type="module" src="./scripts/main.js"></script>
   </body>
 </html>
