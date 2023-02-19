@@ -142,10 +142,10 @@ if(window.innerWidth <= 1200 && window.innerWidth >= 720) {
 
 const swiper1 = new Swiper(".benefits-swiper", {
   slidesPerView: 2,
-  spaceBetween: 10,
   loop: true,
+  allowTouchMove: false,
   autoplay: {
-    delay: 4000,
+    delay: 1000,
   },
 });
 
