@@ -145,7 +145,7 @@ const swiper1 = new Swiper(".benefits-swiper", {
   loop: true,
   allowTouchMove: false,
   autoplay: {
-    delay: 1000,
+    delay: 2500,
   },
 });
 

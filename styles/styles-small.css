@@ -84,10 +84,14 @@
 
     .info-element{
         height: auto !important;
-        width: 45%;
+        width: 45% !important;
         color: #625F4E;
         background: transparent;
         border: none;
+        box-shadow: none;
+    }
+
+    .info-element:hover {
         box-shadow: none;
     }
 
@@ -176,7 +180,7 @@
     }
 
     .gradient{
-        background: linear-gradient(#625f4e 48%, rgba(255, 255, 255, 0), #ffffff);
+        background: linear-gradient(#625f4e 54%, rgba(255, 255, 255, 0), #ffffff);
     }
 
     .top_main-info{
@@ -199,5 +203,6 @@
     .header-menu_modal{
         padding-top: 30%;
     }
+
 
 }
