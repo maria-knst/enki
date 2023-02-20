@@ -66,8 +66,15 @@ showButton.addEventListener('click', (event) => {
 
 document.getElementById('header-menu').addEventListener('click', (event) => {
   event.preventDefault();
+  const menu = document.getElementById('header-menu');
   document.getElementById('header-menu_modal').classList.toggle('hidden');
-  document.getElementById('header-menu').classList.toggle('header-menu_active');
+  menu.classList.toggle('header-menu_active');
+  if (menu.classList.contains('header-menu_active')) {
+    menu.innerHTML = '<img src="./images/menu-burger_a.svg" alt="menu">';
+  } else {
+    menu.innerHTML = '<img src="./images/menu-burger.svg" alt="menu">';
+  }
+
 });
 
 const getTrustPage = (event) => {
@@ -145,7 +152,7 @@ const swiper1 = new Swiper(".benefits-swiper", {
   loop: true,
   allowTouchMove: false,
   autoplay: {
-    delay: 2500,
+    delay: 5000,
   },
 });
 
