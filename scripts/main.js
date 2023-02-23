@@ -5,6 +5,20 @@ const activities_m = document.querySelectorAll(".activities_container-element-m"
 const list_items = document.querySelectorAll(".header-menu_list-item_clicked");
 const showMoreBut = document.getElementById("activities_show-more");
 
+
+const aboutSwipeWrapper = document.getElementById('about_swiper-wrapper');
+const certificatesAmout = 14;
+
+for (let i = 0; i < certificatesAmout; i++){
+  aboutSwipeWrapper.innerHTML += `
+    <div class="swiper-slide swiper-slide_modal">
+        <div class="swiper-slide_image">
+          <img src="./images/certificates/certificate${i + 1}.png" alt="${i + 1}">
+        </div>
+    </div>`;
+}
+
+
 window.addEventListener('resize', (e) => {
   location.reload();
 });
@@ -39,7 +53,7 @@ const showButton = document.getElementById('show-modal');
 
 const closeModal = document.getElementById('close-modal');
 
-const lastCertificateIndex = 9;
+const paginationDotsAmount = 9;
 
 const getPagination = (element, number, light) => {
   for(let i = 0; i < number; i++){
@@ -51,7 +65,7 @@ const getPagination = (element, number, light) => {
   }
 }
 
-getPagination(document.getElementById('about-pagination'),lastCertificateIndex);
+getPagination(document.getElementById('about-pagination'),paginationDotsAmount);
 
 
 closeModal.addEventListener('click', (event) => {
