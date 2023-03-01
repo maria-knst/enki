@@ -18,9 +18,12 @@ for (let i = 0; i < certificatesAmout; i++){
     </div>`;
 }
 
+const windowInnerWidth = window.innerWidth;
 
 window.addEventListener('resize', (e) => {
-  location.reload();
+  if(windowInnerWidth !== window.innerWidth){
+    location.reload();
+  }
 });
 
 if(window.innerWidth < 1200){
@@ -40,10 +43,24 @@ showMoreBut.addEventListener("click", (e) => {
   showMoreBut.classList.add("activities_show-more-hidden");
 });
 
+const toggleMenuBurger = () => {
+  const menu = document.getElementById('header-menu');
+  document.getElementById('header-menu_modal').classList.toggle('hidden');
+  menu.classList.toggle('header-menu_active');
+  if (menu.classList.contains('header-menu_active')) {
+    console.log('ACTIVE');
+    menu.innerHTML = '<img src="./images/menu-burger_a.svg" alt="menu">';
+  } else {
+    console.log('NOT ACTIVE');
+    menu.innerHTML = '<img src="./images/menu-burger.svg" alt="menu">';
+  }
+};
+
 list_items.forEach(item => {
   item.addEventListener('click', (ev) => {
     ev.preventDefault();
-    document.getElementById('header-menu_modal').classList.add('hidden');
+    //document.getElementById('header-menu_modal').classList.add('hidden');
+    toggleMenuBurger();
     document.getElementById('header-menu').classList.remove('header-menu_active');
   });
 })
@@ -78,17 +95,10 @@ showButton.addEventListener('click', (event) => {
   modal.classList.toggle('hidden-element');
 });
 
+
 document.getElementById('header-menu').addEventListener('click', (event) => {
   event.preventDefault();
-  const menu = document.getElementById('header-menu');
-  document.getElementById('header-menu_modal').classList.toggle('hidden');
-  menu.classList.toggle('header-menu_active');
-  if (menu.classList.contains('header-menu_active')) {
-    menu.innerHTML = '<img src="./images/menu-burger_a.svg" alt="menu">';
-  } else {
-    menu.innerHTML = '<img src="./images/menu-burger.svg" alt="menu">';
-  }
-
+  toggleMenuBurger();
 });
 
 const getTrustPage = (event) => {
@@ -151,7 +161,7 @@ document.getElementById('menu_item_address_p').addEventListener('click', (event)
 });
 
 
-if(window.innerWidth <= 1200 && window.innerWidth >= 720) {
+if(windowInnerWidth <= 1200 && windowInnerWidth >= 720) {
   document.getElementById('benefits-section_info-container').classList.add('benefits-swiper');
   document.getElementById('benefits-section_info-container').classList.add('swiper');
   document.getElementById('swiper-wrapper').classList.add('swiper-wrapper');
